@@ -81,7 +81,7 @@ aws s3api create-bucket --bucket kops-abhi-storage --region us-east-1
 ```
 kops create cluster --name=demok8scluster.k8s.local --state=s3://kops-abhi-storage --zones=us-east-1a --node-count=1 --node-size=t2.micro --master-size=t2.micro  --master-volume-size=8 --node-volume-size=8
 ```
-
+here we are using `--name=demok8scluster.k8s.local` but if we talk about real-life applications it's usually `example.com`  instead of `k8s.local`  
 ### Important: Edit the configuration as there are multiple resources created which won't fall into the free tier.
 
 ```
